@@ -81,6 +81,7 @@ Nous avons parlé des API REST.
 
 ### TP2 :
 
-#### Tenter d’expliquer comment les données indexées sont analysées :  
+#### Tenter d’expliquer comment les données indexées sont analysées : 
+
 Les données indexées sont analysées de la manière suivante : 
-- 
+
