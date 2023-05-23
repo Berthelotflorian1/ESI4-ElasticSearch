@@ -47,13 +47,10 @@ Mapping : https://www.elastic.co/guide/en/elasticsearch/reference/current/explic
      }
  }
  
- Indexation des documents :
- 
- 
  ### Exercices sur le mapping
  
  #### Comment Elasticsearch procède-t-il au mapping ?
- Si aucune info n'est renseignée, Elasticsearch procède au mapping de manière dynamique (type choisi automatiquement selon ce qui semble le + logique).
+ Si aucune info n'est renseignée, Elasticsearch procède au mapping de manière dynamique (type déduit automatiquement selon ce qui semble le + logique).
 
 #### Peut-on modifier le mapping sans recréer l’index ?  
 Il est possible de modifier le mapping sans recréer l'index en utilisant /_mapping :
@@ -81,3 +78,9 @@ Normalisation : La normalisation ressemble à l'analyseur présent dans la token
 #### Lors de la démonstration nous avons évoqué la notion d’API, desquelles avons-nous parlé ?
 
 Nous avons parlé des API REST.
+
+### TP2 :
+
+#### Tenter d’expliquer comment les données indexées sont analysées :  
+Les données indexées sont analysées de la manière suivante : 
+- 
