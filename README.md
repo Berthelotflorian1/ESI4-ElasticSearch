@@ -13,7 +13,7 @@ Lancement d'ElasticSearch depuis le cmd :
 - cd C:\elasticsearch-8.7.1
 - .\bin\elasticsearch.bat
 
-Installation de Kibana en deux fois (car lors de la première installation, lors du "setup", le chargement était infini).
+Installation de Kibana en deux fois (car lors de la première installation, lors du "setup", le chargement était infini). Doc : https://www.elastic.co/fr/downloads/kibana
 Lancement de Kibana depuis un autre cmd :
 - cd C:\kibana-8.7.1
 - bin\kibana.bat
@@ -23,3 +23,28 @@ http://localhost:5601/app/integrations/browse
 
 ## Mardi 23/05/2023
 
+Installation Logstash à l'aide de la doc suivante : https://www.elastic.co/fr/downloads/logstash
+
+Téléchargement du zip
+Création du fichier .conf
+Lancement de logstash :
+- cd C:\logstash 8.7.1
+- bin/logstash -f logstash-simple.conf
+
+Création d'un index : https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html
+Dans Management -> Dev Tools
+
+PUT /my-index-000001
+
+Mapping : https://www.elastic.co/guide/en/elasticsearch/reference/current/explicit-mapping.html
+
+ PUT /my-index-000001/_mapping
+ {
+     "properties": {
+       "age": {"type":"integer"},
+       "email": {"type": "binary"},
+       "name": {"type": "text"}
+     }
+ }
+ 
+ Indexation des documents :
