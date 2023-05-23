@@ -48,3 +48,36 @@ Mapping : https://www.elastic.co/guide/en/elasticsearch/reference/current/explic
  }
  
  Indexation des documents :
+ 
+ 
+ ### Exercices sur le mapping
+ 
+ #### Comment Elasticsearch procède-t-il au mapping ?
+ Si aucune info n'est renseignée, Elasticsearch procède au mapping de manière dynamique (type choisi automatiquement selon ce qui semble le + logique).
+
+#### Peut-on modifier le mapping sans recréer l’index ?  
+Il est possible de modifier le mapping sans recréer l'index en utilisant /_mapping :
+
+PUT /index/_mapping
+ {
+   "properties" : {
+   
+   }
+ }
+### Exercices sur l’analyseur :  
+
+#### Tentez de définir : Tokenisation et Normalisation 
+
+Tokenisation : La tokenisation dans ElasticSearch est un processus qui divise du texte en jeton (token). Chaque jeton correspond à un mot ou partie d'un mot et cela constitue l'unité de base utilisée pour l'indexation et la recherche de texte.
+Il y a plusieurs étapes à la tokenisation :
+- L'analyseur : Décompose le texte en jeton (il enlève également les caractères spéciaux et espaces, et convertir les mots en minuscules)
+- Suppression des mots courants qui n'apportent pas de valeur sémantique (le, la, et, de...)
+- Simplification des mots pour les regrouper (selon leur racine ou autres critères)
+
+Normalisation : La normalisation ressemble à l'analyseur présent dans la tokenisation. Cependant, celui-ci ne peut créer qu'un seul jeton et ne possède donc pas de tokeniseur. Les filtres acceptés sont donc limités.
+
+### Les APIs :
+
+#### Lors de la démonstration nous avons évoqué la notion d’API, desquelles avons-nous parlé ?
+
+Nous avons parlé des API REST.
