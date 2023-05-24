@@ -81,7 +81,7 @@ Nous avons parlé des API REST principalement.
 
 ### TP2 :
 
-### Mercredi 24/05/2023
+## Mercredi 24/05/2023
 
 #### Tenter d’expliquer comment les données indexées sont analysées : 
 
@@ -89,3 +89,16 @@ Les données indexées sont analysées de la manière suivante :
 Les données sont stockées dans des index. Lorsque les données sont indexées, Elasticsearch effectue un processus d'analyse sur le texte afin de le préparer pour la recherche. L'analyse comprend plusieurs étapes : la tokenisation, la norrmalisation et le filtrage des mots.
 La tokenisation va transformer les mots en token, la normalisation va convertir les mots pour les simplifier (mise en minuscule par exemple), le filtrage des mots va supprimer les mots courants jugés inutiles (le,la,de...)
 Pour chaque analyse, ElasticSearch créé un index inversé pour retrouver la liste des documents qui correspondent à la requête.
+
+### TP3 :
+
+A – élaborez un schéma global qui permet de comprendre au mieux les concepts suivants avec Elasticsearch :  
+Sharding (Diapo slide 115) 
+Réplica 
+Index 
+Alias d’index 
+Document 
+Nœud (Diapo 122) 
+Cluster (Diapo 121 et +) 
+
+(Voir doc Schéma global)
