@@ -127,5 +127,26 @@ Via Replicas : Ajout de noeuds pour créer des replicas
 Via Index : Multiplier les index permettra d'augmenter la capacité de données.
 
 ### B – Testez la Scroll API :
+### D’après vos recherches pourquoi l’utiliser ? Est-ce le bon paramètre de recherche pour effectuer de la recherche paginée ?  
+
+L'utilisation de l'API Scroll permet de récupérer un grand nombre de résultats de recherche de manière efficace. Elle permet de paginer les résultats et de traiter des volumes de données plus importants.
+Lorsque l'on effectue une recherche classique retournant beaucoup de résultats, ElasticSearch limite la taille des résultats renvoyés. L'API Scroll intervient à ce moment là ; pour récupérer le reste des résultats.
+Il s'agit bien du bon paramètre de recherche pour effectuer de la recherche paginée. En effet, l'avantage de l'APi Scroll est qu'elle permet de ne pas avoir à paginer manuellement les résultats avec des requêtes supplémentaires (qui auraient dû etre réalisées sans l'utilisation de l'API).
+
+### C- Kibana : 
+### Quel est l’usage principal de Kibana ?  
+
+Kibana est un outil de visualisation de données pour ElasticSearch. Il permet d'effectuer des recherches, de visualiser des documents individuels et d'agréger des résultats dans des graphes et des diagrammes.
+
+
+### Qu’est-ce qu’un Dashboard ?  
+
+Un Dashboard (=Tableau de bord) sur Kibana permet de juxtaposer les vues qui ont été créées afin de visualiser en un coup d'oeil les données les plus importantes.
+Kibana permet la création de graphiques, de cartes et de filtres pour visualiser les données ElasticSearch.
+
+
+
+
+
 
 
