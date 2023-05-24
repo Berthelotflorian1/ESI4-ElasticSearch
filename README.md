@@ -101,12 +101,31 @@ Document
 Nœud (Diapo 122) 
 Cluster (Diapo 121 et +) 
 
-(Voir doc Schéma global)
-
-
+(Voir doc "Schéma global 2.0")
 
 ### Expliquez alors comment Elasticsearch stocke ses données et comment certaines de ces notions permettent de gagner en robustesse (en termes de sauvegarde et d’intégrité des données). 
 ### Terminez en résumant les fonctionnalités de mise à l’échelle… (diapo 148 et +) 
 
+#### Comment Elasticsearch stocke ses données :
+Elasticsearch stocke ses données à l'aide d'une structure appelée "index inversé". 
+Lorsque des données sont indexées (=documents mis dans un index), elles sont divisées en "shards" (fragment d'index) et chaque shard est une unité de stockage indépendante. Les shards sont ensuite envoyées à travers un cluster dans le but de simplifier les opérations de recherche ou d'écriture. Le but final de cette fragmentation est d'améliorer les performances et la disponibilité
+
+Les documents sont stockés dans un format JSON. Chaque document est composé de champs et de valeurs. Les champs peuvent contenir différents types de données tels que des chaînes de caractères, des nombres, des dates, etc.
+Les données sont répliquées à travers plusieurs nœuds du cluster pour assurer la redondance et la disponibilité des données en cas de défaillance d'un nœud.
+
+#### Comment certaines notions permettent de gagner en robustesse :
+Les notions de cluster / noeuds / shards permettent de gagner en robustesse car le fait de "diviser" les données permet de ne pas avoir à faire des recherches sur l'entiereté des données lorsque l'on sait précisément où celles-ci se trouvent.
+Egalement, la notion de "replica" (copie des noeuds / index / shards) permet d'augmenter la robustesse d'eslastisearch. Une redondance des données est ainsi proposée, en cas de défaillance d'un noeud, les données peuvent être récupérées à partir des copies présentes sur d'autres noeuds.
+L'API Snapshot and Restore propose des fonctionnalités de sauvegarde et création de snapshots. Ces dernières permettent la création de copie sauvegardée dans un référentiel externe. Ces snapshots peuvent être utilisées pour restaurer des données.
+
+#### Résumé des fonctionnalités de mise à l'échelle :
+Les fonctionnalités de mise à l'échelle (=scaling) permettent une adaptabilité aux changements de dimensions.
+Elasticsearch répartit automatiquement les shards existantes entre les noeuds (nbre de shards > nbre de noeuds).
+Pour effectuer du scaling, l'unité de base est le shard. Pour optimiser les ressources, chaque shard devrait contenir entre 10 et 50 Go.
+Le scaling peut également être géré via les replicas et les index.
+Via Replicas : Ajout de noeuds pour créer des replicas
+Via Index : Multiplier les index permettra d'augmenter la capacité de données.
+
+### B – Testez la Scroll API :
 
 
