@@ -101,7 +101,7 @@ Document
 Nœud (Diapo 122) 
 Cluster (Diapo 121 et +) 
 
-(Voir doc "Schéma global 2.0")
+(Voir doc "Schéma global 3.0")
 
 ### Expliquez alors comment Elasticsearch stocke ses données et comment certaines de ces notions permettent de gagner en robustesse (en termes de sauvegarde et d’intégrité des données). 
 ### Terminez en résumant les fonctionnalités de mise à l’échelle… (diapo 148 et +) 
