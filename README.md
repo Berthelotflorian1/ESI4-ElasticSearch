@@ -5,7 +5,7 @@
 
 Installation d'Elasticsearch, Kibana, Logstash à l'aide de la doc suivante (en local) : https://www.elastic.co/guide/en/elasticsearch/reference/current/zip-windows.html 
 
-A la suite de téléchargement du zip et de l'installation d'Elasticsearch, le "current health status" était "red" et bloquait donc le lancement d'ElasticSearch.
+A la suite du téléchargement du zip et de l'installation d'Elasticsearch, le "current health status" était "red" et bloquait donc le lancement d'ElasticSearch.
 Le password et le token n'étaient pas générés.
 A la suite de recherche, il s'avère qu'un espace insuffisant sur C:\ causait le problème. L'installation bloquait et tournait dans le vide sur le disque D:\.
 Après avoir fait de l'espace sur C:\ et suite à deux lancements, ElasticSearch a finalement généré password et token.
@@ -81,13 +81,15 @@ Nous avons parlé des API REST principalement.
 
 ### TP2 :
 
-## Mercredi 24/05/2023
+Suivi d'un tuto ElasticSearch sur Python pour se lancer.
+
+## Mercredi 24/05/2023 ; Jeudi 25/05/2023
 
 #### Tenter d’expliquer comment les données indexées sont analysées : 
 
 Les données indexées sont analysées de la manière suivante : 
 Les données sont stockées dans des index. Lorsque les données sont indexées, Elasticsearch effectue un processus d'analyse sur le texte afin de le préparer pour la recherche. L'analyse comprend plusieurs étapes : la tokenisation, la norrmalisation et le filtrage des mots.
-La tokenisation va transformer les mots en token, la normalisation va convertir les mots pour les simplifier (mise en minuscule par exemple), le filtrage des mots va supprimer les mots courants jugés inutiles (le,la,de...)
+La tokenisation transforme les mots en token, la normalisation convertit les mots pour les simplifier (mise en minuscule par exemple), le filtrage des mots supprime les mots courants jugés inutiles (le,la,de...)
 Pour chaque analyse, ElasticSearch créé un index inversé pour retrouver la liste des documents qui correspondent à la requête.
 
 ### TP3 :
@@ -142,7 +144,7 @@ Kibana est un outil de visualisation de données pour ElasticSearch. Il permet d
 ### Qu’est-ce qu’un Dashboard ?  
 
 Un Dashboard (=Tableau de bord) sur Kibana permet de juxtaposer les vues qui ont été créées afin de visualiser en un coup d'oeil les données les plus importantes.
-Kibana permet la création de graphiques, de cartes et de filtres pour visualiser les données ElasticSearch.
+Kibana rend possible la création de graphiques, de cartes et de filtres pour visualiser les données d'ElasticSearch.
 
 
 
