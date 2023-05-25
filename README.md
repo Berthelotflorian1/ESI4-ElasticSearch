@@ -95,7 +95,7 @@ Pour chaque analyse, ElasticSearch créé un index inversé pour retrouver la li
 
 ### TP3 :
 
-A – élaborez un schéma global qui permet de comprendre au mieux les concepts suivants avec Elasticsearch :  
+#### A – élaborez un schéma global qui permet de comprendre au mieux les concepts suivants avec Elasticsearch :  
 Sharding (Diapo slide 115) 
 Réplica 
 Index 
@@ -104,7 +104,7 @@ Document
 Nœud (Diapo 122) 
 Cluster (Diapo 121 et +) 
 
-(Voir doc "Schéma global 3.0")
+[Voir doc "Schéma global 3.0"]
 
 ### Expliquez alors comment Elasticsearch stocke ses données et comment certaines de ces notions permettent de gagner en robustesse (en termes de sauvegarde et d’intégrité des données). 
 ### Terminez en résumant les fonctionnalités de mise à l’échelle… (diapo 148 et +) 
