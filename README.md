@@ -82,6 +82,7 @@ Nous avons parlé des API REST principalement.
 ### TP2 :
 
 Suivi d'un tuto ElasticSearch sur Python pour se lancer.
+Utilisation d'un dataset kaggle -> winemag-data (voir pièce jointe : *[winemag-data_first150k.zip]*)
 
 ## Mercredi 24/05/2023 ; Jeudi 25/05/2023
 
@@ -116,7 +117,7 @@ Les documents sont stockés dans un format JSON. Chaque document est composé de
 Les données sont répliquées à travers plusieurs nœuds du cluster pour assurer la redondance et la disponibilité des données en cas de défaillance d'un nœud.
 
 #### Comment certaines notions permettent de gagner en robustesse :
-Les notions de cluster / noeuds / shards permettent de gagner en robustesse car le fait de "diviser" les données permet de ne pas avoir à faire des recherches sur l'entiereté des données lorsque l'on sait précisément où celles-ci se trouvent.
+Les notions de cluster / noeuds / shards permettent de gagner en robustesse car le fait de "diviser" les données permet de ne pas avoir à faire de recherches sur l'entiereté des données lorsque l'on sait précisément où celles-ci se trouvent.
 Egalement, la notion de "replica" (copie des noeuds / index / shards) permet d'augmenter la robustesse d'eslastisearch. Une redondance des données est ainsi proposée, en cas de défaillance d'un noeud, les données peuvent être récupérées à partir des copies présentes sur d'autres noeuds.
 L'API Snapshot and Restore propose des fonctionnalités de sauvegarde et création de snapshots. Ces dernières permettent la création de copie sauvegardée dans un référentiel externe. Ces snapshots peuvent être utilisées pour restaurer des données.
 
@@ -150,9 +151,4 @@ Un Dashboard (=Tableau de bord) a pour fonction de permettre la visualisation, l
 Un Dashboard sur Kibana permet de juxtaposer les vues qui ont été créées afin de visualiser en un coup d'oeil les données les plus importantes.
 Kibana rend possible la création de graphiques, de cartes et de filtres pour visualiser les données d'ElasticSearch.
 
-
-
-
-
-
-
+[winemag-data_first150k.zip](https://github.com/Berthelotflorian1/ESI4-ElasticSearch/files/11564295/winemag-data_first150k.zip)
