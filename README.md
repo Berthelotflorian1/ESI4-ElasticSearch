@@ -133,17 +133,21 @@ Via Index : Multiplier les index permettra d'augmenter la capacité de données.
 
 L'utilisation de l'API Scroll permet de récupérer un grand nombre de résultats de recherche de manière efficace. Elle permet de paginer les résultats et de traiter des volumes de données plus importants.
 Lorsque l'on effectue une recherche classique retournant beaucoup de résultats, ElasticSearch limite la taille des résultats renvoyés. L'API Scroll intervient à ce moment là ; pour récupérer le reste des résultats.
+
 Il s'agit bien du bon paramètre de recherche pour effectuer de la recherche paginée. En effet, l'avantage de l'APi Scroll est qu'elle permet de ne pas avoir à paginer manuellement les résultats avec des requêtes supplémentaires (qui auraient dû etre réalisées sans l'utilisation de l'API).
 
 ### C- Kibana : 
 ### Quel est l’usage principal de Kibana ?  
 
 Kibana est un outil de visualisation de données pour ElasticSearch. Il permet d'effectuer des recherches, de visualiser des documents individuels et d'agréger des résultats dans des graphes et des diagrammes.
+Kibana est utilisé principalement pour explorer, analyser et visualiser des données stockées dans ElasticSearch. L'outil facilite donc le traitement des données, la création de visuels et tableaux de bords personnalisés ainsi que l'analyse des journaux.
+Pour une entreprise, Kibana permettra une aide à la compréhension de données et donc une aide à la prise de décisions basées sur des informations précises et visuellement intelligibles.
 
 
 ### Qu’est-ce qu’un Dashboard ?  
 
-Un Dashboard (=Tableau de bord) sur Kibana permet de juxtaposer les vues qui ont été créées afin de visualiser en un coup d'oeil les données les plus importantes.
+Un Dashboard (=Tableau de bord) a pour fonction de permettre la visualisation, le suivi et l'exploitation facile de données pertinentes sous formes de chiffres, ratios et/ou graphiques. Ces indicateurs sont liés à des objectifs dans le but de prendre des décisions.
+Un Dashboard sur Kibana permet de juxtaposer les vues qui ont été créées afin de visualiser en un coup d'oeil les données les plus importantes.
 Kibana rend possible la création de graphiques, de cartes et de filtres pour visualiser les données d'ElasticSearch.
 
 
