@@ -152,3 +152,11 @@ Un Dashboard sur Kibana permet de juxtaposer les vues qui ont été créées afi
 Kibana rend possible la création de graphiques, de cartes et de filtres pour visualiser les données d'ElasticSearch.
 
 [winemag-data_first150k.zip](https://github.com/Berthelotflorian1/ESI4-ElasticSearch/files/11564295/winemag-data_first150k.zip)
+
+### Question bonus : 
+
+### Comment s'appelle l'équivalent d'un schéma pour un index Elastisearch ?
+### Rien de tout ça -> Pourquoi ?
+L'équivalent d'un schéma pour un index Elastissearch est un champ d'exécution qui sert uniquement au moment de la requête. Pour utiliser les champs d'exécution, iI suffit de les définir dans le mapping d'index ou dans la requête.
+
+
